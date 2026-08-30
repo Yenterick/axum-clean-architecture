@@ -1,6 +1,8 @@
 use axum::{Json, Router, response::IntoResponse, routing::get};
 use serde_json::{Value, json};
 
+mod infraestructure;
+
 #[tokio::main]
 async fn main() {
     let app: Router = Router::new().route("/health", get(hello_world));
